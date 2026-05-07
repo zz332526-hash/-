@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="header">菜单</view>
+  <block wx:for="{{dishes}}" wx:key="dishId">
+    <view class="dish">
+      <text>{{item.name || item.dishId}} ¥{{item.price || '--'}}</text>
+      <button data-item="{{item}}" bindtap="onAddTap" size="mini">加入</button>
+    </view>
+  </block>
+  <button bindtap="goCart">去购物车</button>
+</view>
