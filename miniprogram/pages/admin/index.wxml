@@ -1,0 +1,17 @@
+<view class="page">
+  <view>商家管理</view>
+
+  <view>
+    <input placeholder="新增分类名" value="{{categoryName}}" bindinput="onCategoryNameInput" />
+    <button bindtap="addCategory">添加分类</button>
+  </view>
+
+  <view>
+    <picker mode="selector" range="{{categories}}" range-key="name" bindchange="onCategoryChange">
+      <view>当前分类：{{selectedCategoryId || '暂无'}}</view>
+    </picker>
+    <input placeholder="菜品名" value="{{dishName}}" bindinput="onDishNameInput" />
+    <input placeholder="价格" type="digit" value="{{dishPrice}}" bindinput="onDishPriceInput" />
+    <button bindtap="addDish">添加菜品</button>
+  </view>
+</view>

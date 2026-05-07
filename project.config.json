@@ -1,0 +1,18 @@
+{
+  "description": "点餐小程序本地调试配置",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "trial",
+  "appid": "touristappid",
+  "projectname": "ordering-miniapp",
+  "miniprogramRoot": "miniprogram/"
+}
