@@ -1,8 +1,0 @@
-<view class="page">
-  <view>购物车</view>
-  <block wx:for="{{items}}" wx:key="dishId">
-    <view>{{item.name || item.dishId}} x {{item.quantity}}</view>
-  </block>
-  <view>合计：¥{{total}}</view>
-  <button bindtap="submitOrder">提交订单</button>
-</view>
