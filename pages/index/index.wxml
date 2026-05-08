@@ -1,9 +1,12 @@
 <view class="home">
-  <swiper class="banner" indicator-dots autoplay circular>
+  <swiper class="banner" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
     <block wx:for="{{banners}}" wx:key="*this">
-      <swiper-item><image class="banner-img" src="{{item}}" mode="aspectFill" /></swiper-item>
+      <swiper-item>
+        <image class="banner-img" src="{{item}}" mode="aspectFill" />
+      </swiper-item>
     </block>
   </swiper>
+
   <view class="panel">
     <view class="title">青柠白桃露</view>
     <view class="desc">青柠清新微酸，白桃清甜多汁，果香明亮，清爽不腻。</view>
