@@ -1,7 +1,0 @@
-.home{padding:24rpx;background:#f6f7f8;min-height:100vh;}
-.banner{height:520rpx;border-radius:24rpx;overflow:hidden}
-.banner-img{width:100%;height:100%}
-.panel{margin-top:20rpx;background:#fff;border-radius:24rpx;padding:28rpx}
-.title{font-size:42rpx;font-weight:700}
-.desc{margin-top:14rpx;color:#666;line-height:1.7}
-.primary{margin-top:24rpx;background:#111;color:#fff;border-radius:16rpx}
