@@ -1,47 +1,12 @@
-<view class="app">
-  <view class="topbar card">
-    <view>
-      <view class="muted">当前门店</view>
-      <view class="title">HEYTEA 灵感店</view>
-    </view>
-    <button class="ghost" size="mini" bindtap="onSwitchType">{{takeType}}</button>
-  </view>
-
-  <view class="hero card">
-    <view class="hero-title">今日推荐</view>
-    <view class="muted">轻负担 · 真果茶 · 鲜奶茶</view>
-  </view>
-
-  <view class="menu-layout">
-    <view class="category card">
-      <block wx:for="{{categories}}" wx:key="*this">
-        <view class="cat-btn {{item === currentCategory ? 'active' : ''}}" data-cat="{{item}}" bindtap="onSelectCategory">{{item}}</view>
-      </block>
-    </view>
-
-    <view class="products">
-      <block wx:for="{{currentProducts}}" wx:key="id">
-        <view class="product">
-          <view>
-            <view class="name">{{item.name}}</view>
-            <view class="desc">{{item.desc}}</view>
-            <view class="price">¥{{item.price.toFixed(2)}}</view>
-          </view>
-          <view class="controls">
-            <button class="ghost mini" data-id="{{item.id}}" data-delta="-1" bindtap="onChangeQty">-</button>
-            <text class="count">{{item.qty || 0}}</text>
-            <button class="mini" data-id="{{item.id}}" data-delta="1" bindtap="onChangeQty">+</button>
-          </view>
-        </view>
-      </block>
-    </view>
-  </view>
-
-  <view class="cartbar card">
-    <view>
-      <view class="muted">已选 {{cartCount}} 件</view>
-      <view class="total">¥{{cartTotal}}</view>
-    </view>
-    <button bindtap="onCheckout" disabled="{{cartCount === 0}}">去结算</button>
+<view class="home">
+  <swiper class="banner" indicator-dots autoplay circular>
+    <block wx:for="{{banners}}" wx:key="*this">
+      <swiper-item><image class="banner-img" src="{{item}}" mode="aspectFill" /></swiper-item>
+    </block>
+  </swiper>
+  <view class="panel">
+    <view class="title">青柠白桃露</view>
+    <view class="desc">青柠清新微酸，白桃清甜多汁，果香明亮，清爽不腻。</view>
+    <button class="primary" bindtap="goOrder">立即点单</button>
   </view>
 </view>
